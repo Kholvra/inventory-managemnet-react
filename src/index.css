@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@layer base {
+  /* Base styles can go here if needed */
+}
+
+@layer components {
+  /* Custom component classes */
+  .flex-col-gap {
+    @apply flex flex-col gap-5;
+  }
+  
+}
+
+@layer utilities {
+  /* Custom utilities can go here */
+}
