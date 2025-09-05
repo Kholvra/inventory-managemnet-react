@@ -15,3 +15,7 @@
 @layer utilities {
   /* Custom utilities can go here */
 }
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
