@@ -1,18 +1,25 @@
+import { useState } from "react";
 import ButtonSidebar from "./ButtonSidebar";
 
 function Sidebar() {
+  const [page, setPage]= useState(1);
+
+  const changePage = (pageNumber:number)=>{
+    setPage(pageNumber);
+  }
+
   return (
     <div className="flex-col-gap w-64 h-screen justify-between items-start p-5 border">
       <div className="flex-col-gap items-start">
-        <ButtonSidebar variant="Dashboard" />
-        <ButtonSidebar variant="Inventory" />
-        <ButtonSidebar variant="Reports" />
-        <ButtonSidebar variant="Suppliers" />
-        <ButtonSidebar variant="Orders" />
+        <ButtonSidebar variant="Dashboard" idPage={1} pageNow = {page} changePage = {changePage}/>
+        <ButtonSidebar variant="Inventory" idPage={2} pageNow = {page} changePage = {changePage}/>
+        <ButtonSidebar variant="Reports" idPage={3} pageNow = {page} changePage = {changePage}/>
+        <ButtonSidebar variant="Suppliers" idPage={4} pageNow = {page} changePage = {changePage}/>
+        <ButtonSidebar variant="Orders" idPage={5} pageNow = {page} changePage = {changePage}/>
       </div>
       <div className="flex-col-gap items-start">
-        <ButtonSidebar variant="Settings" />
-        <ButtonSidebar variant="Log Out" />
+        <ButtonSidebar variant="Settings" idPage={6} pageNow = {page} changePage = {changePage}/>
+        <ButtonSidebar variant="Log Out" idPage={7} pageNow = {page} changePage = {changePage}/>
       </div>
     </div>
   );
