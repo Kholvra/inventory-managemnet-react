@@ -1,19 +1,29 @@
 @import "tailwindcss";
 
 @layer base {
-  /* Base styles can go here if needed */
 }
 
 @layer components {
-  /* Custom component classes */
   .flex-col-gap {
     @apply flex flex-col gap-10;
   }
   
+  /* safelist */
+  .row-span-1 { @apply row-span-1; }
+  .row-span-2 { @apply row-span-2; }
+  .row-span-3 { @apply row-span-3; }
+  .row-span-4 { @apply row-span-4; }
+  .row-span-5 { @apply row-span-5; }
+  .row-span-6 { @apply row-span-6; }
+  .col-span-1 { @apply col-span-1; }
+  .col-span-2 { @apply col-span-2; }
+  .col-span-3 { @apply col-span-3; }
+  .col-span-4 { @apply col-span-4; }
+  .col-span-5 { @apply col-span-5; }
+  .col-span-6 { @apply col-span-6; }
 }
 
 @layer utilities {
-  /* Custom utilities can go here */
 }
 
 body{
