@@ -1,19 +1,19 @@
-import Button from "./Button";
+import ButtonSidebar from "./ButtonSidebar";
 
 function Sidebar() {
   return (
     <div className="flex-col-gap w-64 h-screen justify-between items-start p-5 border">
       <div className="flex-col-gap items-start">
-        <Button variant="Dashboard" />
-        <Button variant="Inventory" />
-        <Button variant="Reports" />
-        <Button variant="Suppliers" />
-        <Button variant="Orders" />
-        <Button variant="Manage Store" />
+        <ButtonSidebar variant="Dashboard" />
+        <ButtonSidebar variant="Inventory" />
+        <ButtonSidebar variant="Reports" />
+        <ButtonSidebar variant="Suppliers" />
+        <ButtonSidebar variant="Orders" />
+        <ButtonSidebar variant="Manage Store" />
       </div>
       <div className="flex-col-gap items-start">
-        <Button variant="Settings" />
-        <Button variant="Log Out" />
+        <ButtonSidebar variant="Settings" />
+        <ButtonSidebar variant="Log Out" />
       </div>
     </div>
   );
