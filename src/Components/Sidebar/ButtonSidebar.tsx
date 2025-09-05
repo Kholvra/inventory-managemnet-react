@@ -151,7 +151,7 @@ function ButtonSidebar({ variant, idPage, pageNow,changePage }: Props) {
     <>
       <button
         type="button"
-        className="flex flex-row gap-5 cursor-pointer items-center"
+        className="flex flex-row gap-5 items-center text-base cursor-pointer text-stone-600"
         onClick={()=>changePage(idPage)}
       >
         {imageVariant}
