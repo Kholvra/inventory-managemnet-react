@@ -8,6 +8,19 @@ function Sidebar() {
     setPage(pageNumber);
   };
 
+  const buttonListTop = [
+    { variant: "Dashboard", idPage: 1 },
+    { variant: "Inventory", idPage: 2 },
+    { variant: "Reports", idPage: 3 },
+    { variant: "Suppliers", idPage: 4 },
+    { variant: "Orders", idPage: 5 },
+  ];
+
+  const buttonListBottom = [
+    { variant: "Settings", idPage: 6 },
+    { variant: "Log Out", idPage: 7 },
+  ];
+
   return (
     <div className="flex-col-gap w-64 h-screen justify-between items-start p-8">
       <div className="flex-col-gap items-start">
@@ -18,50 +31,24 @@ function Sidebar() {
           <img src="../../../../public/images/logo.svg" alt="" />
           <span>KANBAN</span>
         </button>
-        <ButtonSidebar
-          variant="Dashboard"
-          idPage={1}
-          pageNow={page}
-          changePage={changePage}
-        />
-        <ButtonSidebar
-          variant="Inventory"
-          idPage={2}
-          pageNow={page}
-          changePage={changePage}
-        />
-        <ButtonSidebar
-          variant="Reports"
-          idPage={3}
-          pageNow={page}
-          changePage={changePage}
-        />
-        <ButtonSidebar
-          variant="Suppliers"
-          idPage={4}
-          pageNow={page}
-          changePage={changePage}
-        />
-        <ButtonSidebar
-          variant="Orders"
-          idPage={5}
-          pageNow={page}
-          changePage={changePage}
-        />
+        {buttonListTop.map((item, index) => (
+          <ButtonSidebar
+            key={"button-sidebar-top" + index}
+            {...item}
+            pageNow={page}
+            changePage={changePage}
+          />
+        ))}
       </div>
       <div className="flex-col-gap items-start">
-        <ButtonSidebar
-          variant="Settings"
-          idPage={6}
-          pageNow={page}
-          changePage={changePage}
-        />
-        <ButtonSidebar
-          variant="Log Out"
-          idPage={7}
-          pageNow={page}
-          changePage={changePage}
-        />
+        {buttonListBottom.map((item, index) => (
+          <ButtonSidebar
+            key={"button-sidebar-bottom" + index}
+            {...item}
+            pageNow={page}
+            changePage={changePage}
+          />
+        ))}
       </div>
     </div>
   );
