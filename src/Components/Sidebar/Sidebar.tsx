@@ -9,7 +9,6 @@ function Sidebar() {
         <ButtonSidebar variant="Reports" />
         <ButtonSidebar variant="Suppliers" />
         <ButtonSidebar variant="Orders" />
-        <ButtonSidebar variant="Manage Store" />
       </div>
       <div className="flex-col-gap items-start">
         <ButtonSidebar variant="Settings" />
