@@ -13,7 +13,7 @@ function Sidebar() {
     { variant: "Inventory", idPage: 2 },
     { variant: "Reports", idPage: 3 },
     { variant: "Suppliers", idPage: 4 },
-    { variant: "Orders", idPage: 5 },
+    { variant: "Orders", idPage: 5 }
   ];
 
   const buttonListBottom = [
