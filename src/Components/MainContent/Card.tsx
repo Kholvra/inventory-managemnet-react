@@ -7,7 +7,7 @@ type Props = {
 
 function Card({rows, cols, children}:Props) {
   return (
-    <div className={`row-span-${rows} col-span-${cols} p-5 rounded-lg bg-white`}>
+    <div className={`row-span-${rows} col-span-${cols} p-5 flex flex-row rounded-lg bg-white items-center `}>
       {children}
     </div>
   );
