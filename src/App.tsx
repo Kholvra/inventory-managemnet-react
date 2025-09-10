@@ -2,6 +2,46 @@ import Content from "./Components/MainContent/Content";
 import Topbar from "./Components/Topbar/Topbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import { useEffect, useState } from "react";
+import type { CardStatType } from "./Components/MainContent/CardStat";
+
+export type CardDataType  = {
+  id: string,
+  title: string,
+  grid:{
+    rows:number,
+    cols:number
+  },
+  stats: CardStatType[]
+  };
+
+const CardListData: CardDataType[] = [
+  {
+    id: 'sales',
+    title: 'Sales Overview',
+    grid: {
+      rows: 1,
+      cols: 4
+    },
+    stats:[{
+      label: 'Sales',
+      value: 832,
+      currency: '$'
+    },{
+      label: 'Revenue',
+      value: 18300,
+      currency:'$'
+    },{
+      label: 'Revenue',
+      value: 18300,
+      currency:'$'
+    },{
+      label: 'Revenue',
+      value: 18300,
+      currency:'$'
+    }]
+  }
+]
+
 
 function App() {
 //sidebar responsive conditional rendering------------------------ 
@@ -24,7 +64,7 @@ function App() {
       {showSidebar && <Sidebar />}
       <div className="flex flex-col flex-1">
         <Topbar />
-        <Content />
+        <Content cards = {CardListData} />
       </div>
     </div>
   );
