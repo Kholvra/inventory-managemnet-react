@@ -1,4 +1,4 @@
-import { magnifyingGlassIcon } from "../../assets";
+import { magnifyingGlass } from "../../assets";
 
 type Props = {
   label?: string;
@@ -31,7 +31,7 @@ function Searchbox({ label = "Search", size = "" }: Props) {
           className="absolute left-0 top-1/2 p-3 -translate-y-1/2"
         >
           <img
-            src={magnifyingGlassIcon}
+            src={magnifyingGlass}
             className="size-6"
             alt="Search Icon"
           />

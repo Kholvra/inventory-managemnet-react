@@ -1,6 +1,6 @@
 import Searchbox from "./Searchbox";
 import ButtonTopbar from "./ButtonTopbar";
-import { bellIcon } from "../../assets";
+import { bell } from "../../assets";
 
 function Topbar() {
   return (
@@ -10,7 +10,7 @@ function Topbar() {
       </div>
       <div className="flex flex-row gap-5 items-center">
         <ButtonTopbar
-          image={bellIcon}
+          image={bell}
           alt="bell notification icon"
         />
         <ButtonTopbar alt="photo profile" />
