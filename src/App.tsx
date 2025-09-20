@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="flex h-screen">
       {showSidebar && <Sidebar />}
-      <div className="flex flex-col flex-1">
+      <div className="flex flex-col flex-1 overflow-y-auto">
         <Topbar />
         <Content cards={dashboardData} />
       </div>
