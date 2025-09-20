@@ -1,9 +1,10 @@
 import Card from "./Card";
 import CardContent from "./CardContent";
-import type { CardDataType } from "../../App";
+import Chart from "./Chart";
+import type { dashboardComponentType } from "../../types/index";
 
 type CardDataPropType = {
-  cards: CardDataType[]; 
+  cards: dashboardComponentType[]; 
 }
 
 function Content({cards}:CardDataPropType) {
@@ -11,9 +12,10 @@ function Content({cards}:CardDataPropType) {
     <div className="flex-1 grid grid-rows-6 grid-cols-6 gap-5 lg:rounded-tl-xl p-5 bg-stone-100">
       {cards.map((card)=>{
         return <Card rows={card.grid.rows} cols={card.grid.cols} key={card.id} >
-            <CardContent title={card.title} stats={card.stats} />
+            <CardContent title={card.title} data={card}/>
            </Card>
       })}
+      <Chart/>
     </div>
   )
 }

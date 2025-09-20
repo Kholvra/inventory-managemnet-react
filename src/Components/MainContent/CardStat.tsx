@@ -1,11 +1,4 @@
-export type CardStatType = {
-  label: string;
-  value: number;
-  currency?: string;
-  icon: string;
-  inColumn?: boolean
-};
-
+import type { CardStatType } from "../../types";
 function CardStat({ label, value, currency,icon,inColumn }: CardStatType) {
   let flexDirection;
 
@@ -14,6 +7,8 @@ function CardStat({ label, value, currency,icon,inColumn }: CardStatType) {
   } else{
     flexDirection="flex-row"
   }
+
+
 
 
   return (

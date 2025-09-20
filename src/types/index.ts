@@ -1,26 +1,36 @@
-import type { CardStatType } from "../Components/MainContent/CardStat";
+export type CardStatType = {
+  label: string;
+  value: number;
+  currency?: string;
+  icon: string;
+  inColumn?: boolean;
+};
 
+type DataSets = {
+  label: string;
+  data: number[];
+  backgroundColor: string;
+};
 
+type dashboardBaseType = {
+  id: string;
+  title: string;
+  grid: {
+    rows: number;
+    cols: number;
+  };
+};
 
+type StatsCard ={
+  componentType: "STATS_CARD";
+  stats: CardStatType[];
+};
 
-type dashboardBaseType ={
-      id: string;
-      title: string;
-      grid: {
-        rows: number;
-        cols: number;
-      };
-      
-    };
+type BarChart = {
+  componentType: "BAR_CHART";
+  stats: DataSets[];
+};
 
-type StatsCard = dashboardBaseType & {
-    componentType:"STATS_CARD";
-    stats: CardStatType[];
-}
+export type DataType = StatsCard | BarChart;
 
-type BarChart = dashboardBaseType &{
-    componentType:"BAR_CHART";
-    data: string
-}
-
-export type dashboardComponentType =  StatsCard | BarChart
+export type dashboardComponentType = dashboardBaseType & StatsCard | dashboardBaseType& BarChart;

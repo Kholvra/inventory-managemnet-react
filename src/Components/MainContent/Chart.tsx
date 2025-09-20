@@ -39,7 +39,6 @@ function Chart() {
       {
         label: "Purchase",
         data: [23, 41, 45,30,10,4,56,39,23,10,34,21],
-        // INI PERUBAHANNYA: backgroundColor sekarang adalah sebuah fungsi
         backgroundColor: "rgba(255, 99, 132, 1)"
       },
       {

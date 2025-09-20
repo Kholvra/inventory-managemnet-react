@@ -2,7 +2,7 @@ import Content from "./Components/MainContent/Content";
 import Topbar from "./Components/Topbar/Topbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import { useEffect, useState } from "react";
-import type { CardStatType } from "./Components/MainContent/CardStat";
+import type { dashboardComponentType } from "./types";
 import {
   cancel,
   cost,
@@ -17,17 +17,8 @@ import {
   toBeReceived,
 } from "./assets/index";
 
-export type CardDataType = {
-  id: string;
-  title: string;
-  grid: {
-    rows: number;
-    cols: number;
-  };
-  stats: CardStatType[];
-};
 
-const CardListData: CardDataType[] = [
+const CardListData: dashboardComponentType[] = [
   {
     id: "sales",
     title: "Sales Overview",
@@ -35,6 +26,7 @@ const CardListData: CardDataType[] = [
       rows: 1,
       cols: 4,
     },
+    componentType: "STATS_CARD",
     stats: [
       {
         label: "Sales",
@@ -69,6 +61,7 @@ const CardListData: CardDataType[] = [
       rows: 1,
       cols: 2,
     },
+    componentType: "STATS_CARD",
     stats: [
       {
         label: "Quantity In Hand",
@@ -91,6 +84,7 @@ const CardListData: CardDataType[] = [
       rows: 1,
       cols: 4,
     },
+    componentType: "STATS_CARD",
     stats: [
       {
         label: "Purchase",
@@ -123,6 +117,7 @@ const CardListData: CardDataType[] = [
       rows: 1,
       cols: 2,
     },
+    componentType: "STATS_CARD",
     stats: [
       {
         label: "Number Of Suppliers",
