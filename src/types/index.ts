@@ -6,7 +6,7 @@ export type CardStatType = {
   inColumn?: boolean;
 };
 
-type DataSets = {
+export type DataSets = {
   label: string;
   data: number[];
   backgroundColor: string;
@@ -28,7 +28,8 @@ type StatsCard ={
 
 type BarChart = {
   componentType: "BAR_CHART";
-  stats: DataSets[];
+  labels: string[];
+  datasets: DataSets[];
 };
 
 export type DataType = StatsCard | BarChart;

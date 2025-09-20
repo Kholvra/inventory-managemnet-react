@@ -1,3 +1,4 @@
+import Chart from "./Chart";
 import type { DataType } from "../../types";
 import CardStat from "./CardStat";
 
@@ -21,7 +22,9 @@ function CardContent({ title, data }: CardContent) {
       );
     });
   } else if (data.componentType === "BAR_CHART"){
-    cardUI = <p>halo</p>
+    cardUI = (
+      <Chart labels={data.labels} DataSets={data.datasets}/>
+    )
   }
 
   return (

@@ -1,6 +1,5 @@
 import Card from "./Card";
 import CardContent from "./CardContent";
-import Chart from "./Chart";
 import type { dashboardComponentType } from "../../types/index";
 
 type CardDataPropType = {
@@ -15,7 +14,6 @@ function Content({cards}:CardDataPropType) {
             <CardContent title={card.title} data={card}/>
            </Card>
       })}
-      <Chart/>
     </div>
   )
 }
