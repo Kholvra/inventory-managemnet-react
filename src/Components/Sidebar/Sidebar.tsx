@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ButtonSidebar from "./ButtonSidebar";
+import { logo } from "../../assets";
 
 function Sidebar() {
   const [page, setPage] = useState(1);
@@ -13,7 +14,7 @@ function Sidebar() {
     { variant: "Inventory", idPage: 2 },
     { variant: "Reports", idPage: 3 },
     { variant: "Suppliers", idPage: 4 },
-    { variant: "Orders", idPage: 5 }
+    { variant: "Orders", idPage: 5 },
   ];
 
   const buttonListBottom = [
@@ -28,7 +29,7 @@ function Sidebar() {
           type="button"
           className="flex items-center gap-5 mb-5 text-blue-600 font-medium text-lg"
         >
-          <img src="../../../../public/images/logo.svg" alt="" />
+          <img src={logo} alt="Inventory Management Logo" />
           <span>KANBAN</span>
         </button>
         {buttonListTop.map((item, index) => (

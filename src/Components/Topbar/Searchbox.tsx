@@ -1,10 +1,11 @@
+import { magnifyingGlass } from "../../assets";
+
 type Props = {
   label?: string;
   size?: string;
 };
 
-function Searchbox({ label = "Search", size="" }: Props) {
-
+function Searchbox({ label = "Search", size = "" }: Props) {
   // size input border
   const sizeLower = size.toLowerCase();
   let sizeForm = "";
@@ -30,9 +31,9 @@ function Searchbox({ label = "Search", size="" }: Props) {
           className="absolute left-0 top-1/2 p-3 -translate-y-1/2"
         >
           <img
-            src="../../../../public/images/magnifying-glass.svg"
+            src={magnifyingGlass}
             className="size-6"
-            alt=""
+            alt="Search Icon"
           />
         </button>
       </form>
